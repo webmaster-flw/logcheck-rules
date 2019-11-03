@@ -4,6 +4,7 @@ HOSTS=(
     linode2
     linode-
     adm
+    waw
     edyta
 )
 

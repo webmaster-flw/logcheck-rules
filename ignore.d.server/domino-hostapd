@@ -1,8 +1,32 @@
 # ; -*- mode: text; fill-column: 99999 -*-
 
-# Aug  7 20:50:45 gw hostapd[3973]: wlp1s0: STA a4:8c:c5:87:47:5d IEEE 802.11: disassociated due to inactivity
-# Jun 29 02:02:16 debian hostapd: wlp17s9: STA 34:2d:0d:5f:25:69 IEEE 802.11: disassociated
+# Nov  2 00:00:00 debian hostapd: wls12: STA 0a:0a:0a:0a:0a:0a IEEE 802.1X: Supplicant used different EAP type: 3 (unknown)
 
-^\w{3} [ :0-9]{11} [._[:alnum:]-]+ hostapd(\[[0-9]+\])?: [[:alnum:]]+: STA [[:xdigit:]:]{17} IEEE 802\.11: disassociated( due to inactivity)?$
-^\w{3} [ :0-9]{11} [._[:alnum:]-]+ hostapd(\[[0-9]+\])?: [[:alnum:]]+: STA [[:xdigit:]:]{17} IEEE 802\.11: did not acknowledge authentication response$
+^\w{3} [ :0-9]{11} [._[:alnum:]-]+ hostapd(\[[0-9]+\])?: [[:alnum:]]+: STA [[:xdigit:]:]{17} IEEE 802\.1(1|X): Supplicant used different EAP type: 3 \(unknown\)$
+
+# Aug  7 20:50:45 gw hostapd[3973]: wlp1s0: STA 0a:0a:0a:0a:0a:0a IEEE 802.11: disassociated due to inactivity
+# Jun 29 02:02:16 debian hostapd: wlp17s9: STA 0a:0a:0a:0a:0a:0a IEEE 802.11: disassociated
+
+^\w{3} [ :0-9]{11} [._[:alnum:]-]+ hostapd(\[[0-9]+\])?: [[:alnum:]]+: STA [[:xdigit:]:]{17} IEEE 802\.1(1|X): disassociated( due to inactivity)?$
+^\w{3} [ :0-9]{11} [._[:alnum:]-]+ hostapd(\[[0-9]+\])?: [[:alnum:]]+: STA [[:xdigit:]:]{17} IEEE 802\.1(1|X): did not acknowledge authentication response$
+
+# Nov  2 00:00:00 debian hostapd: wls12: STA 0a:0a:0a:0a:0a:0a RADIUS: stopped accountingd session C6B18F77C457573B
+
+^\w{3} [ :0-9]{11} [._[:alnum:]-]+ hostapd(\[[0-9]+\])?: [[:alnum:]]+: STA [[:xdigit:]:]{17} RADIUS: stopped accounting session [[:xdigit:]]+$
+
 ^\w{3} [ :0-9]{11} [._[:alnum:]-]+ hostapd(\[[0-9]+\])?: [[:alnum:]]+: RADIUS (No response from )?Accounting server [.:[:xdigit:]]+( - failover)?$
+
+# Nov  2 00:00:00 debian hostapd: wls12: STA 0a:0a:0a:0a:0a:0a IEEE 802.1X: authenticated - EAP type: 21 (TTLS)
+# Nov  2 00:00:00 debian hostapd: wls12: STA 0a:0a:0a:0a:0a:0a IEEE 802.1X: authentication failed - EAP type: 21 (TTLS)
+
+^\w{3} [ :0-9]{11} [._[:alnum:]-]+ hostapd(\[[0-9]+\])?: [[:alnum:]]+: STA [[:xdigit:]:]{17} IEEE 802\.1(1|X): (authenticated|authentication failed) - EAP type: [0-9]+ \(TTLS\)$
+
+# Nov  2 00:00:00 debian hostapd[544]: wls12: CTRL-EVENT-EAP-FAILURE2 0a:0a:0a:0a:0a:0a
+# Nov  2 00:00:00 debian hostapd[544]: wls12: CTRL-EVENT-EAP-PROPOSED-METHOD vendor=0 method=1
+# Nov  2 00:00:00 debian hostapd[544]: wls12: CTRL-EVENT-EAP-RETRANSMIT 0a:0a:0a:0a:0a:0a
+# Nov  2 00:00:00 debian hostapd[544]: wls12: CTRL-EVENT-EAP-RETRANSMIT2 0a:0a:0a:0a:0a:0a
+# Nov  2 00:00:00 debian hostapd[544]: wls12: CTRL-EVENT-EAP-STARTED 0a:0a:0a:0a:0a:0a
+# Nov  2 00:00:00 debian hostapd[544]: wls12: CTRL-EVENT-EAP-SUCCESS2 0a:0a:0a:0a:0a:0a
+# Nov  2 00:00:00 debian hostapd[544]: wls12: CTRL-EVENT-EAP-TIMEOUT-FAILURE 0a:0a:0a:0a:0a:0a
+
+^\w{3} [ :0-9]{11} [._[:alnum:]-]+ hostapd(\[[0-9]+\])?: [[:alnum:]]+: CTRL-EVENT-EAP-(STARTED|SUCCESS2|RETRANSMIT(2)?|TIMEOUT-FAILURE|FAILURE2|PROPOSED-METHOD) ([[:xdigit:]:]{17})?(vendor=[0-9]+ method=[0-9]+)?$
