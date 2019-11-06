@@ -6,6 +6,7 @@ HOSTS=(
     adm
     waw
     edyta
+    m81-
 )
 
 for host in ${HOSTS[*]}; do

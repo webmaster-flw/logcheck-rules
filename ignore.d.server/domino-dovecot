@@ -21,8 +21,19 @@ Connection closed, session=<rMypJBKTJJBqDH/T>
 # Sep 21 17:52:07 debian-linode dovecot: imap-login: Disconnected (no auth attempts in 6 secs): user=<>, rip=106.12.127.211, lip=139.162.172.22, TLS handshaking: Connection closed,
 session=<+gg1KxKT0MlqDH/T>
 
-^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ dovecot: imap-login: Disconnected \((no auth attempts in [0-9]+ secs|disconnected before auth was ready, waited [0-9]+ secs)\): user=<>, rip=[.[:digit:]]+, lip=[.[:digit:]]+, TLS handshaking: (Connection closed,|read\(size=[0-9]+\) failed: Connection reset by peer,) session=<[\/[:alnum:]+]+>$
+^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ dovecot: imap-login: Disconnected \((no auth attempts in [0-9]+ secs|disconnected before auth was ready, waited [0-9]+ secs)\): user=<>, rip=[.[:digit:]]+, lip=[.[:digit:]]+, TLS( handshaking)?: (Connection closed,|read\(size=[0-9]+\) failed: Connection reset by peer,) session=<[\/[:alnum:]+]+>$
 
 # Sep 17 03:09:07 debian-linode dovecot: auth: Warning: Event 0x562bf4aefcc0 leaked (parent=(nil)): auth-client-connection.c:338
 
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ dovecot: auth: Warning: Event [[:alnum:]]+ leaked \(parent=\(nil\)\): auth-client-connection.c:[0-9]+$
+
+# Nov  6 00:00:00 linode2 dovecot: imap(abc@domain.com)<3549><7UkTJq6W7pxPvAGh>: Disconnected for inactivity in=322 out=1009 deleted=0 expunged=0 trashed=0 hdr_count=0 hdr_bytes=0 body_count=0 body_bytes=0
+
+^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ dovecot: imap\([-[:alnum:]@\.]+\)<[[:alnum:]]+>(<[\/+[:alnum:]]+>)?: Disconnected for inactivity in=[0-9-]+ out=[0-9]+ deleted=[0-9]+ expunged=[0-9]+ trashed=[0-9]+ hdr_count=[0-9]+ hdr_bytes=[0-9]+ body_count=[0-9]+ body_bytes=[0-9]+$
+
+# Nov  6 00:00:00 linode2 dovecot: imap(abc@domain.com)<1187><GLJqa62WpLdPvAGh>: Connection closed (UID FETCH finished 895.794 secs ago) in=329 out=3439 deleted=0 expunged=0 trashed=0 hdr_count=0 hdr_bytes=0 body_count=0 body_bytes=0
+# Nov  6 00:00:00 linode2 dovecot: imap(abc@domain.com)<1186><Kqppa62WordPvAGh>: Connection closed (LIST finished 895.877 secs ago) in=23 out=897 deleted=0 expunged=0 trashed=0 hdr_count=0 hdr_bytes=0 body_count=0 body_bytes=0
+# Nov  6 00:00:00 linode2 dovecot: imap(abc@domain.com)<28476><OR1DvquWiLRPvAGh>: Connection closed (NOOP finished 0.072 secs ago) in=31 out=940 deleted=0 expunged=0 trashed=0 hdr_count=0 hdr_bytes=0 body_count=0 body_bytes=0
+
+^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ dovecot: imap\([-[:alnum:]@\.]+\)<[[:alnum:]]+>(<[\/+[:alnum:]]+>)?: Connection closed \((UID FETCH|LIST|NOOP)? finished [0-9.]+ secs ago\) in=[0-9-]+ out=[0-9]+ deleted=[0-9]+ expunged=[0-9]+( trashed=[0-9]+)?( hdr_count=[0-9]+)?( hdr_bytes=[0-9]+)?( body_count=[0-9]+)?( body_bytes=[0-9]+)?$
+

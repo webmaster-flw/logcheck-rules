@@ -19,7 +19,7 @@
 # Nov  2 00:00:00 debian hostapd: wls12: STA 0a:0a:0a:0a:0a:0a IEEE 802.1X: authenticated - EAP type: 21 (TTLS)
 # Nov  2 00:00:00 debian hostapd: wls12: STA 0a:0a:0a:0a:0a:0a IEEE 802.1X: authentication failed - EAP type: 21 (TTLS)
 
-^\w{3} [ :0-9]{11} [._[:alnum:]-]+ hostapd(\[[0-9]+\])?: [[:alnum:]]+: STA [[:xdigit:]:]{17} IEEE 802\.1(1|X): (authenticated|authentication failed) - EAP type: [0-9]+ \(TTLS\)$
+^\w{3} [ :0-9]{11} [._[:alnum:]-]+ hostapd(\[[0-9]+\])?: [[:alnum:]]+: STA [[:xdigit:]:]{17} IEEE 802\.1(1|X): (authenticated|authentication failed) - EAP type: [0-9]+ \(TTLS\)( \(PMKSA cache\))?$
 
 # Nov  2 00:00:00 debian hostapd[544]: wls12: CTRL-EVENT-EAP-FAILURE2 0a:0a:0a:0a:0a:0a
 # Nov  2 00:00:00 debian hostapd[544]: wls12: CTRL-EVENT-EAP-PROPOSED-METHOD vendor=0 method=1
