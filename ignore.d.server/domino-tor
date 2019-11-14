@@ -10,3 +10,12 @@
 # Jun 25 19:20:39 router Tor[992]: Heartbeat: Tor's uptime is 6:00 hours, with 6 circuits open. I've sent 878 kB and received 1.70 MB.
 
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ Tor\[[[:digit:]]+\]: Heartbeat: Tor's uptime is( [0-9]+ days)? [[:digit:]:]+ hours, with [0-9]+ circuits open. I've sent [.[:digit:]]+ [[:alnum:]]{1,2} and received [.[:digit:]]+ [[:alnum:]]{1,2}.$
+
+# Nov  7 00:01:05 linode2 Tor[14367]: Read configuration file "/usr/share/tor/tor-service-defaults-torrc".
+# Nov  7 00:01:05 linode2 Tor[14367]: Read configuration file "/etc/tor/torrc".
+
+^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ Tor\[[[:digit:]]+\]: Read configuration file "[[:alnum:]\/-]+".$
+
+# Nov  7 00:01:05 linode2 Tor[14367]: Received reload signal (hup). Reloading config and resetting internal state.
+
+^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ Tor\[[[:digit:]]+\]: Received reload signal \(hup\)\. Reloading config and resetting internal state\.$

@@ -4,8 +4,6 @@
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ dovecot: imap: Connection closed in=[[:digit:]]+ out=[[:digit:]]+$
 
 # Aug 13 23:21:00 debian dovecot: imap(routeruser)<18757><MyKjGgKQlqbAqAAJ>: Connection closed (IDLE running for 0.001 + waiting input for 8.605 secs, 2 B in + 10 B out, state=wait-input) in=170461 out=572606 deleted=0 expunged=0 trashed=0 hdr_count=624 hdr_bytes=168025 body_count=0 body_bytes=0
-# Aug 13 23:21:00 debian dovecot: imap(routeruser)<21818><rJ67mQKQEqjAqAAJ>: Connection closed (IDLE running for 0.001 + waiting input for 83.738 secs, 2 B in + 10 B out, state=wait-input) in=9021 out=88639 deleted=0 expunged=0 trashed=0 hdr_count=5 hdr_bytes=931 body_count=6 body_bytes=9811
-# Aug 13 23:21:00 debian dovecot: imap(routeruser)<18762><uX/NGgKQmqbAqAAJ>: Connection closed (IDLE running for 0.001 + waiting input for 7.481 secs, 2 B in + 10 B out, state=wait-input) in=273196 out=4805241 deleted=0 expunged=0 trashed=0 hdr_count=1182 hdr_bytes=208690 body_count=1193 body_bytes=3203414
 # Aug 13 19:32:47 debian dovecot: imap(routeruser)<21817><rJ67mQKQEKjAqAAJ>: Logged out in=305 out=46530 deleted=0 expunged=0 trashed=0 hdr_count=1 hdr_bytes=221 body_count=0 body_bytes=0
 
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ dovecot: imap\([[:alnum:]\.@_-]+\)<[[:digit:]]+><[\/[:alnum:]]+>: Connection closed \(IDLE running for [[:digit:]\.]+ \+ waiting input for [[:digit:]\.]+ secs, [0-9]+ B in \+ [[:digit:]\+]+ B out, state=wait-input\) in=[0-9]+ out=[0-9]+ deleted=[0-9]+ expunged=[0-9]+ trashed=[0-9]+ hdr_count=[0-9]+ hdr_bytes=[0-9]+ body_count=[0-9]+ body_bytes=[0-9]+$
@@ -13,17 +11,14 @@
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ dovecot: imap\([\._@[:alnum:]-]+\)<[[:digit:]]+><[\+\/[:alnum:]]+>: Logged out in=[[:digit:]]+ out=[[:digit:]]+ deleted=[[:digit:]]+ expunged=[[:digit:]]+ trashed=[[:digit:]]+ hdr_count=[[:digit:]]+ hdr_bytes=[[:digit:]]+ body_count=[[:digit:]]+ body_bytes=[[:digit:]]+$
 
 
-# Sep 18 05:09:54 debian-linode dovecot: imap-login: Disconnected (no auth attempts in 1 secs): user=<>, rip=198.108.67.48, lip=139.162.172.22, TLS handshaking: read(size=1024) failed: Connection reset by peer, session=<xDPTK8uSvlLGbEMw>
-# Sep 17 17:15:28 debian-linode dovecot: imap-login: Disconnected (no auth attempts in 10 secs): user=<>, rip=159.203.201.11, lip=139.162.172.22, TLS handshaking: Connection closed, session=<JlbEMMGSGISfy8kL>
-# Sep 21 17:50:17 debian-linode dovecot: imap-login: Disconnected (disconnected before auth was ready, waited 0 secs): user=<>, rip=106.12.127.211, lip=139.162.172.22, TLS handshaking: Connection closed, session=<rMypJBKTJJBqDH/T>
-# Sep 21 17:50:17 debian-linode dovecot: imap-login: Disconnected (disconnected before auth was ready, waited 0 secs): user=<>, rip=106.12.127.211, lip=139.162.172.22, TLS handshaking:
-Connection closed, session=<rMypJBKTJJBqDH/T>
-# Sep 21 17:52:07 debian-linode dovecot: imap-login: Disconnected (no auth attempts in 6 secs): user=<>, rip=106.12.127.211, lip=139.162.172.22, TLS handshaking: Connection closed,
-session=<+gg1KxKT0MlqDH/T>
+# Sep 18 05:09:54 debian dovecot: imap-login: Disconnected (no auth attempts in 1 secs): user=<>, rip=1.2.3.4, lip=2.3.4.5, TLS handshaking: read(size=1024) failed: Connection reset by peer, session=<xDPTK8uSvlLGbEMw>
+# Sep 21 17:50:17 debian dovecot: imap-login: Disconnected (disconnected before auth was ready, waited 0 secs): user=<>, rip=1.2.3.4, lip=2.3.4.5, TLS handshaking: Connection closed, session=<rMypJBKTJJBqDH/T>
+# Nov 14 07:59:36 debian dovecot: imap-login: Disconnected (no auth attempts in 1 secs): user=<>, rip=1.2.3.4, lip=2.3.4.5, TLS: SSL_read failed: error:140940F5:SSL
+routines:ssl3_read_bytes:unexpected record, session=<aBY1BkmXLKJHBp6m>
 
-^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ dovecot: imap-login: Disconnected \((no auth attempts in [0-9]+ secs|disconnected before auth was ready, waited [0-9]+ secs)\): user=<>, rip=[.[:digit:]]+, lip=[.[:digit:]]+, TLS( handshaking)?: (Connection closed,|read\(size=[0-9]+\) failed: Connection reset by peer,) session=<[\/[:alnum:]+]+>$
+^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ dovecot: imap-login: Disconnected \((no auth attempts in [0-9]+ secs|disconnected before auth was ready, waited [0-9]+ secs)\): user=<>, rip=[.[:digit:]]+, lip=[.[:digit:]]+, TLS:? (handshaking: (read\(size=[0-9]+\) failed: Connection reset by peer|Connection closed)|SSL_read failed: error:[[:alnum:]]+:SSL\sroutines:ssl3_read_bytes:unexpected record), session=<[[:alnum:]\/]+>$
 
-# Sep 17 03:09:07 debian-linode dovecot: auth: Warning: Event 0x562bf4aefcc0 leaked (parent=(nil)): auth-client-connection.c:338
+# Sep 17 03:09:07 debian dovecot: auth: Warning: Event 0x562bf4aefcc0 leaked (parent=(nil)): auth-client-connection.c:338
 
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ dovecot: auth: Warning: Event [[:alnum:]]+ leaked \(parent=\(nil\)\): auth-client-connection.c:[0-9]+$
 
@@ -35,5 +30,11 @@ session=<+gg1KxKT0MlqDH/T>
 # Nov  6 00:00:00 linode2 dovecot: imap(abc@domain.com)<1186><Kqppa62WordPvAGh>: Connection closed (LIST finished 895.877 secs ago) in=23 out=897 deleted=0 expunged=0 trashed=0 hdr_count=0 hdr_bytes=0 body_count=0 body_bytes=0
 # Nov  6 00:00:00 linode2 dovecot: imap(abc@domain.com)<28476><OR1DvquWiLRPvAGh>: Connection closed (NOOP finished 0.072 secs ago) in=31 out=940 deleted=0 expunged=0 trashed=0 hdr_count=0 hdr_bytes=0 body_count=0 body_bytes=0
 
-^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ dovecot: imap\([-[:alnum:]@\.]+\)<[[:alnum:]]+>(<[\/+[:alnum:]]+>)?: Connection closed \((UID FETCH|LIST|NOOP)? finished [0-9.]+ secs ago\) in=[0-9-]+ out=[0-9]+ deleted=[0-9]+ expunged=[0-9]+( trashed=[0-9]+)?( hdr_count=[0-9]+)?( hdr_bytes=[0-9]+)?( body_count=[0-9]+)?( body_bytes=[0-9]+)?$
+^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ dovecot: imap\([-[:alnum:]@\.]+\)<[[:alnum:]]+>(<[\/+[:alnum:]]+>)?: Connection closed \((UID FETCH|UID STORE|LIST|NOOP|STATUS)? finished [0-9.]+ secs ago\) in=[0-9-]+ out=[0-9]+ deleted=[0-9]+ expunged=[0-9]+( trashed=[0-9]+)?( hdr_count=[0-9]+)?( hdr_bytes=[0-9]+)?( body_count=[0-9]+)?( body_bytes=[0-9]+)?$
 
+# Nov  9 11:12:28 linode2 dovecot: imap(abc@domain.com)<2509><7BepIueWNJtPvWPC>: Connection closed: read(size=8013) failed: Connection reset by peer (IDLE running for 0.001 + waiting input for 0.001 secs, 2 B in + 10 B out, state=wait-input) in=179 out=10967 deleted=0 expunged=0 trashed=0 hdr_count=0 hdr_bytes=0 body_count=0 body_bytes=0
+
+# Nov  9 11:12:28 linode2 dovecot: imap(abc@domain.com)<2508><HA+gIueWJptPvWPC>: Connection closed (IDLE running for 0.001 + waiting input for 0.001 secs, 2 B in + 10+10 B out, state=wait-input) in=180 out=89621 deleted=0 expunged=0 trashed=0 hdr_count=0 hdr_bytes=0 body_count=0 body_bytes=0
+
+
+^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ dovecot: imap\([-[:alnum:]@\.]+\)<[[:alnum:]]+>(<[\/+[:alnum:]]+>)?: Connection closed(: read\(size=[0-9]+\))?( failed: Connection reset by peer)? \(IDLE running for [0-9.]+ \+ waiting input for [0-9.]+ secs, [0-9]+ B in \+ [0-9\+]+ B out, state=wait-input\) in=[0-9-]+ out=[0-9]+ deleted=[0-9]+ expunged=[0-9]+( trashed=[0-9]+)?( hdr_count=[0-9]+)?( hdr_bytes=[0-9]+)?( body_count=[0-9]+)?( body_bytes=[0-9]+)?$
