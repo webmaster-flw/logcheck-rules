@@ -23,9 +23,10 @@
 
 # timesyncd:
 # Aug 14 08:22:50 debian systemd-timesyncd[762]: Synchronized to time server for the first time 193.219.28.147:123 (2.debian.pool.ntp.org).
+# Nov 14 13:35:50 debian systemd-timesyncd[291]: Synchronized to time server for the first time 91.212.242.20:123 (0.debian.pool.ntp.org).
 
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ systemd-timesyncd\[[[:digit:]]+\]: Timed out waiting for reply from [.[:digit:]:]+ \([.[:alnum:]]+\).$
-^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ systemd-timesyncd\[[[:digit:]]+\]: Synchronized to time server [.[:digit:]:]+ \([.[:alnum:]]+\).$
+^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ systemd-timesyncd\[[[:digit:]]+\]: Synchronized to time server for the first time [.[:digit:]:]+ \([.[:alnum:]]+\).$
 
 # systemd-networkd-wait-online:
 # Aug 14 06:24:04 debian systemd-networkd-wait-online[1360]: Event loop failed: Connection timed out
@@ -33,6 +34,19 @@
 # Aug 13 23:53:11 debian systemd-networkd-wait-online[7015]: Event loop failed: Connection timed out
 
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ systemd-networkd-wait-online\[[[:digit:]]+\]: Event loop failed: Connection timed out$
+
+
+# Nov 15 08:04:02 router systemd-networkd[28813]: tun1: Gained carrier
+# Nov 15 08:04:02 router systemd-networkd[28813]: tun1: Gained IPv6LL
+# Nov 15 08:14:59 router systemd-networkd[28813]: tun1: Lost carrier
+
+^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ systemd-networkd\[[[:digit:]]+\]: tun[0-9]+: (Gained|Lost) (carrier|IPv6LL)$
+
+
+# Nov 15 09:12:43 router systemd-udevd[17579]: link_config: autonegotiation is unset or enabled, the speed and duplex are not writable.
+
+^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ systemd-udevd\[[[:digit:]]+\]: link_config: autonegotiation is unset or enabled, the speed and duplex are not writable.$
+
 
 # Sep 20 13:12:43 router systemd[1]: Created slice User Slice of UID 33.
 # Sep 20 08:06:32 router systemd[1]: Removed slice User Slice of UID 33.
