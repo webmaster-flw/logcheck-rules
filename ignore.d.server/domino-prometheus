@@ -1,0 +1,7 @@
+# ; -*- mode: conf; fill-column: 99999 -*-
+
+# Nov 22 14:00:04 debian prometheus[32638]: level=info ts=2019-11-22T13:00:04.246087667Z caller=compact.go:443 component=tsdb msg="write block" mint=1574416800000 maxt=1574424000000 ulid=01DT9K5D4VS9WQVQBR2RHZG486
+# Nov 22 10:00:03 debian prometheus[32638]: level=info ts=2019-11-22T09:00:03.519216705Z caller=head.go:526 component=tsdb msg="head GC completed" duration=3.876908ms
+# Nov 22 10:00:03 debian prometheus[32638]: level=info ts=2019-11-22T09:00:03.649576084Z caller=compact.go:391 component=tsdb msg="compact blocks" count=3 mint=1574380800000 maxt=1574402400000 ulid=01DT95DY28TPGM37SHKZGW8HNZ sources="[01DT8GTS3F22AAFPBRMCT8AHD6 01DT8QPFWB6RYKAM4PQVSWEQTT 01DT8YJ74G7F58SFX0JCEFRZER]" duration=121.365121ms
+
+^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ prometheus\[[0-9]+\]: level=info ts=[-[:digit:]TZ\.:]+ caller=(compact|head)\.go:[0-9]+ component=tsdb msg="(write block|head GC completed|compact blocks)?"( count=[0-9]+)?( mint=[0-9]+ maxt=[0-9]+ ulid=[[:alnum:]]+)?( sources="\[[[:alnum:] ]+\]")?( duration=[[:digit:]\.]+ms)?$

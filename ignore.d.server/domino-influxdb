@@ -1,0 +1,11 @@
+# ; -*- mode: conf; fill-column: 99999 -*-
+
+# Nov 24 09:51:32 debian influxd[27703]: [httpd] 192.168.0.1 - root [24/Nov/2019:09:51:32 +0100] "GET /query?db=abc&q=SELECT+%2A+from+state HTTP/1.1" 200 244 "-" "python-requests/2.22.0" 9d3d77ce-0e97-11ea-8077-000000000000 1833
+# Nov 24 09:51:46 debian influxd[27703]: [httpd] ::1 - - [24/Nov/2019:09:51:46 +0100] "POST /query?db=&epoch=ns&q=SHOW+DATABASES HTTP/1.1" 200 116 "-" "InfluxDBShell/1.6.4" a52ae7c6-0e97-11ea-8079-000000000000 2350
+# Nov 24 09:52:45 debian influxd[27703]: [httpd] 192.168.0.1 - root [24/Nov/2019:09:52:45 +0100] "POST /write?db=abc HTTP/1.1" 204 0 "-" "python-requests/2.22.0" c841ac38-0e97-11ea-807d-000000000000 6362
+
+^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ influxd\[[0-9]+\]: \[httpd\]( [,.:[:digit:]]+,)? [,.:[:digit:]]+ \-( \-)? [[:alnum:]-]+ \[[\/:\+[:alnum:] ]+\] \"(POST|GET) \/[\?\=\&\+\%[:alnum:]-]+ HTTP\/1\.1\" [0-9]+ [0-9]+ \"\-\" \"[\-\/\.[:alnum:]]+\" [[:alnum:]-]+ [0-9]+$
+
+# Nov 24 09:51:32 debian influxd[27703]: ts=2019-11-24T08:51:32.912602Z lvl=info msg="Executing query" log_id=0JIHWOo0000 service=query query="SELECT * FROM abc.autogen.state"
+
+^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ influxd\[[0-9]+\]: ts=[\:\-\.[:alnum:]]+ lvl=info msg=\"Executing query\" log_id=[[:alnum:]]+ service=query query=\"[\*\.\(\)\>\=\<[:alnum:] -]+\"$
