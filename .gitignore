@@ -1,6 +1,6 @@
-/*
-!/.gitignore
-!/ignore.d.server/
-/ignore.d.server/*
-!/ignore.d.server/domino*
+#/*
+#!/.gitignore
+#!/ignore.d.server/
+#/ignore.d.server/*
+#!/ignore.d.server/domino*
 
