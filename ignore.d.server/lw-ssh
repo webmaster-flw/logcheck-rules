@@ -3,5 +3,5 @@
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ sshd\[[[:digit:]]+\]: User child is on pid [[:digit:]]+$
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ sshd\[[[:digit:]]+\]: Starting session: shell on pts/[[:digit:]]+ for [[:alnum:]]+ from [:.[:xdigit:]]+ port [[:digit:]]+ id [[:digit:]]+$
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ sshd\[[[:digit:]]+\]: Close session: user [[:alnum:]]+ from [:.[:xdigit:]]+ port [[:digit:]]+ id [[:digit:]]+$
-^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ sshd\[[[:digit:]]+\]: Transferred: send [[:digit:]]+, received [[:digit:]]+ bytes$
+^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ sshd\[[[:digit:]]+\]: Transferred: sent [[:digit:]]+, received [[:digit:]]+ bytes$
 
