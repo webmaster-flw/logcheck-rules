@@ -1,0 +1,3 @@
+^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ sudo\[[[:digit:]]+\]: pam_ssh_agent_auth: Failed Authentication: `[[:alnum:]]+' as `[[:alnum:]]+' using /etc/sudo_authorized_keys$
+
+
