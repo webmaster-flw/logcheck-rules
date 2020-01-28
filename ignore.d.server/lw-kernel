@@ -1,0 +1,1 @@
+^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ kernel: \[[\.0-9]+\] CIFS VFS: Free previous auth_key.response = [0-9a-f]+$
