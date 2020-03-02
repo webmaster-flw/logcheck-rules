@@ -1,0 +1,9 @@
+^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ apt\.systemd\.daily\[[[:digit:]]+\]: verbose level [[:digit:]]$
+^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ apt\.systemd\.daily\[[[:digit:]]+\]: download updated metadata \(not run|success\)\.$
+^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ apt\.systemd\.daily\[[[:digit:]]+\]: autoclean \(not run|success\)$
+^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ apt\.systemd\.daily\[[[:digit:]]+\]: clean \(not run|success\)$
+^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ apt\.systemd\.daily\[[[:digit:]]+\]: download upgradable \(not run|success\)$
+^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ apt\.systemd\.daily\[[[:digit:]]+\]: unattended-upgrade (-d)? \(not run|succes\)$
+^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ apt\.systemd\.daily\[[[:digit:]]+\]: skip aging since MaxAge is 0$
+^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ apt\.systemd\.daily\[[[:digit:]]+\]: check_stamp: interval=[[:digit:]]+$
+^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ apt\.systemd\.daily\[[[:digit:]]+\]: check_stamp: interval=[[:digit:]]+, now=[[:digit:]]+, stamp=[[:digit:]]+, delta=[[:digit:]]+ \(sec\)$
