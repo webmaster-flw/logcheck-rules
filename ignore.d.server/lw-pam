@@ -2,3 +2,7 @@
 ^\w{3} [ :0-9]{11} [._[:alnum:]-]+ [[:alpha:]]+\[[0-9]+\]: \(pam_[[:alnum:]]+\) session opened for user [_[:alnum:]-]+\$? by ([[:alnum:]-]+)?\(uid=[0-9]+\)$
 ^\w{3} [ :0-9]{11} [._[:alnum:]-]+ [[:alpha:]]+(\[[0-9]+\])?: pam_[[:alnum:]]+\([[:alpha:]]+:session\): session closed for user [_[:alnum:]-]+\$?$
 ^\w{3} [ :0-9]{11} [._[:alnum:]-]+ [[:alpha:]]+(\[[0-9]+\])?: pam_[[:alnum:]]+\([[:alpha:]]+:session\): session opened for user [_[:alnum:]-]+\$? by ([[:alnum:]-]+)?\(uid=[0-9]+\)$
+# pam_ssh_agent_auth
+^\w{3} [ :0-9]{11} [._[:alnum:]-]+ [[:alpha:]]+\[[0-9]+\]: pam_ssh_agent_auth: matching key found: file/command /etc/sudo_authorized_keys, line [[:digit:]]+$
+^\w{3} [ :0-9]{11} [._[:alnum:]-]+ [[:alpha:]]+\[[0-9]+\]: pam_ssh_agent_auth: Found matching RSA key: [0-9a-f\:]+$
+^\w{3} [ :0-9]{11} [._[:alnum:]-]+ [[:alpha:]]+\[[0-9]+\]: pam_ssh_agent_auth: Authenticated: `[_[:alnum:]-]+' as `[_[:alnum:]-]+' using /etc/sudo_authorized_keys$
