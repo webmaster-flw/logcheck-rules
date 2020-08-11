@@ -1,5 +1,6 @@
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ sshd\[[[:digit:]]+\]: Starting session: [[:alnum:]]+ on pts/[[:digit:]]+ for [[:alnum:]]+ from [:.[:xdigit:]]+ port [[:digit:]]+ id [[:digit:]]+$
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ sshd\[[[:digit:]]+\]: Starting session: [[:alnum:]]+ for [[:alnum:]]+ from [:.[:xdigit:]]+ port [[:digit:]]+ id [[:digit:]]+$
+^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ sshd\[[[:digit:]]+\]: Starting session: forced-command \(config\) '/bin/false' for [[:alnum:]]+ from [:.[:xdigit:]]+ port [[:digit:]]+ id [[:digit:]]+$
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ sshd\[[[:digit:]]+\]: Closing connection to [:.[:xdigit:]]+ port [[:digit:]]+$
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ sshd\[[[:digit:]]+\]: Connection closed by [:.[:xdigit:]]+ port [[:digit:]]+$
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ sshd\[[[:digit:]]+\]: Connection closed by (authenticating user|invalid user) [[:alnum:]]+ [.[:digit:]]+ port [0-9]+ \[preauth\]$
