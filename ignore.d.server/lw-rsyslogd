@@ -1,0 +1,6 @@
+#Aug 27 06:25:04 lw51www1 rsyslogd: [origin software="rsyslogd" swVersion="8.24.0" x-pid="544" x-info="http://www.rsyslog.com"] rsyslogd was HUPed
+#Aug 27 06:25:04 lw51www1 liblogging-stdlog:  [origin software="rsyslogd" swVersion="8.24.0" x-pid="544" x-info="http://www.rsyslog.com"] rsyslogd was HUPed
+
+^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ (rsyslogd|liblogging-stdlog):[\s]*\[origin software=\"rsyslogd\" swVersion=\"[[:digit:].]+\" x-pid=\"[0-9]+\" x-info=\"http(s)?:\/\/www.rsyslog.com\"\] rsyslogd was HUPed$
+
+
