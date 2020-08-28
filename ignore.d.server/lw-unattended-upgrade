@@ -7,3 +7,8 @@
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ apt\.systemd\.daily\[[[:digit:]]+\]: skip aging since MaxAge is 0$
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ apt\.systemd\.daily\[[[:digit:]]+\]: check_stamp: interval=[[:digit:]]+$
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ apt\.systemd\.daily\[[[:digit:]]+\]: check_stamp: interval=[[:digit:]]+, now=[[:digit:]]+, stamp=[[:digit:]]+, delta=[[:digit:]]+ \(sec\)$
+^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ apt\.systemd\.daily\[[[:digit:]]+\]: Reading package lists...$
+^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ apt\.systemd\.daily\[[[:digit:]]+\]: Building dependency tree...$
+^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ apt\.systemd\.daily\[[[:digit:]]+\]: Reading state information...$
+^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ unattended-upgrade: Initial blacklist :$
+^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ unattended-upgrade: Initial whitelist:$
