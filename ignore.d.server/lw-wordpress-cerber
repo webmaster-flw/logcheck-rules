@@ -1,1 +1,1 @@
-^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ Cerber\([[:alnum:]\.-]+\)\[[[:digit:]]+\]: Authentication failure for ([[:alnum:]]+|\[login\]) from [[:xdigit:]:\.]+$
+^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ Cerber\([[:alnum:]\.-]+\)\[[[:digit:]]+\]: Authentication failure for ([[:alnum:]\-]+|\[login\]) from [[:xdigit:]:\.]+$
