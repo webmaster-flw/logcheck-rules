@@ -12,3 +12,4 @@
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ apt\.systemd\.daily\[[[:digit:]]+\]: Reading state information...$
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ unattended-upgrade: Initial blacklist :$
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ unattended-upgrade: Initial whitelist:$
+^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ unattended-upgrade: Packages that will be upgraded:$
