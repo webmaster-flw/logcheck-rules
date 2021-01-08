@@ -13,5 +13,5 @@
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ unattended-upgrade: Initial blacklist :.*$
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ unattended-upgrade: Initial whitelist:.*$
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ unattended-upgrade: Packages that will be upgraded:.*$
-^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ unattended-upgrade: Writing dpkg log to '/var/log/unattended-upgrades/unattended-upgrades-dpkg.log'$
+^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ unattended-upgrade: Writing dpkg log to '?/var/log/unattended-upgrades/unattended-upgrades-dpkg.log'?$
 
